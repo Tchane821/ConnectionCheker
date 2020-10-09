@@ -1,4 +1,5 @@
 import os
+import datetime as dt
 from tkinter import *
 
 def pinging():
@@ -31,8 +32,13 @@ def update():
         label['text'] = 'Ping Done'
     else:
         label['text'] = 'Ping Fail'
-    label.after(1000, update)
+        outerror()
+    label.after(3000, update)
 
+def outerror():
+    retourErr = open("./errPing.log","a")
+    retourErr.write( str(dt.datetime.now()) +" -> Erreur de connection\n")
+    retourErr.close()
 
 fene = Tk()
 fene.title('Connection ?')
