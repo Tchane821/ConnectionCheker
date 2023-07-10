@@ -5,13 +5,13 @@ from tkinter import *
 def pinging():
     res = [1, 1, 1, 1]
     #google.fr
-    hostname1 = "216.58.206.227"
+    hostname1 = "google.fr"
     #Wikipedia.org
-    hostname2 = "91.198.174.192"
+    hostname2 = "wikipedia.org"
     #Youtube.com
-    hostname3 = "216.58.204.142"
+    hostname3 = "youtube.com"
     #Twitch.tv
-    hostname4 = "151.101.194.167"
+    hostname4 = "twitch.tv"
     reponseGo = os.system("ping -n 1 " + hostname1)
     reponseWi = os.system("ping -n 1 " + hostname2)
     reponseYo = os.system("ping -n 1 " + hostname3)
